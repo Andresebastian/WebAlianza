@@ -1,54 +1,50 @@
 ---
 // @ts-ignore
 import { Icon } from "astro-icon/components";
+import SercvicioDominical from "assets/sevicioDominical244x244.png";
+import Picture from "astro/components/Picture.astro";
 
 const features = [
   {
-    title: "Bring Your Own Framework",
-    description:
-      "Build your site using React, Svelte, Vue, Preact, web components, or just plain ol' HTML + JavaScript.",
-    icon: "bx:bxs-briefcase",
+    title: "Servicio dominical",
+    description: "Domingo de 10:00 a 12:00",
+    icon: "bx:bxs-church",
+    image: SercvicioDominical,
   },
   {
-    title: "100% Static HTML, No JS",
-    description:
-      "Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.",
-    icon: "bx:bxs-window-alt",
+    title: "Academia Biblica",
+    description: "Domingo de 8:30 a 9:30",
+    icon: "bx:bxs-book",
   },
   {
-    title: "On-Demand Components",
-    description:
-      "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page.  ",
-    icon: "bx:bxs-data",
+    title: "Alianza Kids",
+    description: "Domingo de 10:00 a 12:00",
+    icon: "bx:hard-hat",
   },
   {
-    title: "Broad Integration",
-    description:
-      "Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any other npm packages.",
-    icon: "bx:bxs-bot",
+    title: "Culto de oración",
+    description: "Viernes de 19:00 a 20:00",
+    icon: "bx:window-alt",
   },
   {
-    title: "SEO Enabled",
+    title: "Reunion de adolescentes",
     description:
-      "Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication. It just works!",
+      "Domingo de 10:00 a 12:00,",
     icon: "bx:bxs-file-find",
   },
   {
-    title: "Community",
+    title: "Reunión de damas",
     description:
-      "Astro is an open source project powered by hundreds of contributors making thousands of individual contributions.",
+      "Jueves de 19:00 a 20:00",
     icon: "bx:bxs-user",
   },
 ];
 ---
 
 <div class="mt-16 md:mt-0">
-  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-    Everything you need to start a website
-  </h2>
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">Servicios</h2>
   <p class="text-lg mt-4 text-slate-600">
-    Astro comes batteries included. It takes the best parts of state-of-the-art
-    tools and adds its own innovations.
+    Tenemos varios servicios que se realizan en el transcurso de la semana
   </p>
 </div>
 
@@ -62,6 +58,18 @@ const features = [
         <div>
           <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
           <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+          <div class="py-6 md:order-1 hidden md:block">
+            {item.image && (
+            <Picture
+              src={item.image}
+              alt="Astronaut in the air"
+              widths={[200, 400, 600]}
+              sizes="(max-width: 8100px) 100vw, 620px"
+              loading="eager"
+              format="avif"
+            />
+          )}
+          </div>
         </div>
       </div>
     ))

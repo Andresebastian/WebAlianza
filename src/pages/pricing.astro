@@ -6,38 +6,33 @@ import PricingCard from "@components/pricing.astro";
 
 const pricing = [
   {
-    name: "Personal",
-    price: "Free",
+    name: "Primer Nivel",
+    // price: "Free",
     popular: false,
     features: [
-      "Lifetime free",
-      "Up to 3 users",
-      "Unlimited Pages",
-      "Astro Sub domain",
-      "Basic Integrations",
-      "Community Support",
+      "Bautismo",
+      "Primeros pasos",
+      "Segundos pasos",
     ],
-    button: {
-      text: "Get Started",
-      link: "/",
-    },
+    // button: {
+    //   text: "Get Started",
+    //   link: "/",
+    // },
   },
   {
-    name: "Startup",
-    price: {
-      monthly: "$19",
-      annual: "$16",
-      discount: "10%",
-      original: "$24",
-    },
+    name: "Segundo Nivel",
+    // price: {
+    //   monthly: "$19",
+    //   annual: "$16",
+    //   discount: "10%",
+    //   original: "$24",
+    // },
     popular: true,
     features: [
-      "All Free Features",
-      "Up to 20 users",
-      "20 Custom domains",
-      "Unlimited Collaborators",
-      "Advanced Integrations",
-      "Priority Support",
+      "Antiguo Testamento",
+      "Nuevo Testamento",
+      "Historia de la iglesia",
+      "Doctrina"
     ],
     button: {
       text: "Get Started",
@@ -45,16 +40,13 @@ const pricing = [
     },
   },
   {
-    name: "Enterprise",
-    price: "Custom",
+    name: "Tercer Nivel",
+    // price: "Custom",
     popular: false,
     features: [
-      "All Pro Features",
-      "Unlimited Custom domains",
-      "99.99% Uptime SLA",
-      "SAML & SSO Integration",
-      "Dedicated Account Manager",
-      "24/7 Phone Support",
+      "Viviendo en plenitud",
+      "Viviendo en santidad",
+      "Viviendo en amor",
     ],
     button: {
       text: "Contact us",
@@ -64,12 +56,12 @@ const pricing = [
 ];
 ---
 
-<Layout title="Pricing">
+<Layout title="Academia Biblica">
   <Container>
     <Sectionhead>
-      <Fragment slot="title">Pricing</Fragment>
+      <Fragment slot="title">Academia Biblica</Fragment>
       <Fragment slot="desc">
-        Simple & Predictable pricing. No Surprises.
+        Tenemos cursos por niveles para elevar la espiritualidad de los creyentes.
       </Fragment>
     </Sectionhead>
 
